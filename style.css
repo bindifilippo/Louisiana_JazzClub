@@ -158,16 +158,31 @@ body {
     transform: translateY(0);
 }
 
+.gif{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* assicura che parta in alto */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: auto;  /* non impone altezza extra */
+    min-height: 0; /* se ereditato da qualche parte */
+}
+
+.gif dotlottie-player {
+    margin-bottom: 0 !important;
+    display: block;
+}
+
 .AB{
     display: flex;
     justify-content:center;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .BA{
     display: flex;
     justify-content:center;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 
