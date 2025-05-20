@@ -112,6 +112,19 @@
     border: 0;
 }
 
+/* Effetto “nascosto” di base */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+/* Quando diventa visibile */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .AB{
     display: flex;
     justify-content:center;
