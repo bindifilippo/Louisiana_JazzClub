@@ -5,9 +5,18 @@
     /*border: 1px red solid;*/
 }
 
+body {
+    padding-top: 80px;   /* uguale all’altezza header */
+  }
 
 /*HEADER*/
 .header{
+    position: fixed;     /* lo sgancia dal flusso del documento */
+    top: 0;              /* ancorato al bordo superiore della finestra */
+    left: 0;
+    width: 100%;         /* occupa tutta la larghezza */
+    z-index: 1000;       /* sopra al resto (scegli un valore alto) */
+
     display: flex;
     flex-direction: row;
     background-color: bisque;
@@ -91,7 +100,7 @@
 
 /*HOMEPAGE*/
 .video-wrapper {
-    margin-top: 50px;
+    margin-top: 150px;
     /* occupa tutta la larghezza della pagina */
     width: 100%;
     
@@ -112,11 +121,28 @@
     border: 0;
 }
 
+.eventi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    color:#991E1E;
+}
+.eventi h3{
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:orange;
+}
+
 /* Effetto “nascosto” di base */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity .6s ease, transform .6s ease;
+    transition: opacity .8s ease, transform .8s ease;
+    transition-delay: .05s; /* ritardo leggero anti "flash" */
 }
 
 /* Quando diventa visibile */
@@ -224,6 +250,7 @@ footer{
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    bottom: 0;
 }
 
 .professione{
