@@ -5,9 +5,17 @@
     /*border: 1px red solid;*/
 }
 
+html, body {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    overscroll-behavior-y: none;
+}
+
 body {
-    padding-top: 80px;   /* uguale all’altezza header */
-  }
+    padding-top: 80px;      /* stessa altezza header fisso */
+}
 
 /*=======HEADER=======*/
 .header{
