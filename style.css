@@ -9,7 +9,7 @@ body {
     padding-top: 80px;   /* uguale all’altezza header */
   }
 
-/*HEADER*/
+/*=======HEADER=======*/
 .header{
     position: fixed;     /* lo sgancia dal flusso del documento */
     top: 0;              /* ancorato al bordo superiore della finestra */
@@ -98,7 +98,7 @@ body {
 }
 
 
-/*HOMEPAGE*/
+/*=======HOMEPAGE=======*/
 .video-wrapper {
     margin-top: 150px;
     /* occupa tutta la larghezza della pagina */
@@ -113,7 +113,6 @@ body {
     /* height: 100vh; */
 }
 
-/* se vuoi che l’iframe sia fluido sotto i 560 px */
 .video-wrapper iframe {
     max-width: 100%;
     height: auto;
