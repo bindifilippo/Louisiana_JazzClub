@@ -240,7 +240,7 @@ body {
     font-size: 1rem;
 }
 
-/*FOOTER*/
+/*=======FOOTER=======*/
 footer{
     margin-top: 100px;
     background-color: #991E1E;
@@ -268,7 +268,7 @@ footer{
     margin-left:30px;
 }
 
-/* PROGRAMMA */
+/*=======PROGRAMMA=======*/
 .locandina img{
     width:650px;
     margin-top:100px;
@@ -279,7 +279,7 @@ footer{
     justify-content: center;
 }
 
-/*EVENTI CULTURALI*/
+/*=======EVENTI CULTURALI=======*/
 @media (min-width: 769px) {
     .flex-container {
         margin-top: 125px;
@@ -295,7 +295,7 @@ footer{
     margin:0px 30px 20px 0;
 }
 
-/*TESSERAMENTO*/
+/*=======TESSERAMENTO=======*/
 .flex-container{
     display: flex;
 }
@@ -373,7 +373,7 @@ button:hover {
   }
 
 
-/*Mobile*/
+/*=======MOBILE=======*/
 @media (max-width: 768px) {
     *{
         box-sizing: border-box;
@@ -384,7 +384,7 @@ button:hover {
         max-width: 100%;
     }
 
-/*header*/
+/*=======HEADER=======*/
     .logo{
         width:80px;
         height:80px;
@@ -437,7 +437,8 @@ button:hover {
         text-decoration-line: none;
         cursor:grab;
     }
-/* Homepage-mobile*/
+
+/* =======HOMEPAGE=======*/
     .AB {
         display: flex;
         flex-direction: column-reverse; /* Inverte ordine: prima immagine, poi testo */
@@ -525,7 +526,7 @@ button:hover {
         font-size: .75rem;
     }
 
-/*footer*/
+/*=======FOOTER=======*/
     footer{
         margin-top: 50px;
         background-color: #991E1E;
@@ -558,7 +559,7 @@ button:hover {
         width:20px;
         height: auto;
     }
-/*Programma*/
+/*=======PROGRAMMA=======*/
     .locandina img{
         width:350px;
         margin-top:50px;
@@ -569,7 +570,7 @@ button:hover {
         justify-content: center;
     }
       
-/*Eventi culturali*/ 
+/*=======EVENTI CULTUREALI=======*/ 
 .flex-container{
     display: flex;
     flex-direction: column; /* Imposta sempre colonna */
@@ -591,7 +592,7 @@ button:hover {
     height: auto;
 }
 
-/*Tesseramento*/
+/*=======TESSERAMENTO=======*/
     .flex-container{
             display: flex;
             flex-direction: column; /* Dispone gli elementi in colonna */
