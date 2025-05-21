@@ -303,6 +303,7 @@ footer{
 }
 
 /*=======EVENTI CULTURALI=======*/
+/* Flexbox per desktop */
 @media (min-width: 769px) {
     .flex-container {
         margin-top: 125px;
