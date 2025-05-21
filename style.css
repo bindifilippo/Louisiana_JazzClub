@@ -462,6 +462,27 @@ button:hover {
     }
 
 /* =======HOMEPAGE=======*/
+    .gif {
+      /* Centra comunque la gif */
+      justify-content: center;
+      /* Puoi ridurre la spaziatura sopra/sotto se serve */
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  
+    .gif dotlottie-player {
+      width: 180px !important;
+      height: 180px !important;
+      /* Riduci o annulla il margin-top negativo se sballa il layout */
+      margin-top: -30px !important;
+      margin-bottom: 0 !important;
+    }
+  
+    /* Se usi un wrapper per margin-bottom, puoi anche qui gestire il margin */
+    .lottie-wrapper {
+      margin-bottom: -60px !important;
+    }
+
     .AB {
         display: flex;
         flex-direction: column-reverse; /* Inverte ordine: prima immagine, poi testo */
