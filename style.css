@@ -463,6 +463,16 @@ button:hover {
     }
 
 /* =======HOMEPAGE=======*/
+    .video-wrapper {
+        margin-top: 75px;  
+    }
+
+    .eventi h3{
+        margin-top:-75px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
     .gif {
       /* Centra comunque la gif */
       justify-content: center;
@@ -483,7 +493,10 @@ button:hover {
     .lottie-wrapper {
       margin-bottom: -60px !important;
     }
-
+    .AB.reveal.show{
+        margin-top:0px;
+    }
+    
     .AB {
         display: flex;
         flex-direction: column-reverse; /* Inverte ordine: prima immagine, poi testo */
