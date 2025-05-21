@@ -540,6 +540,7 @@ button:hover {
         font-weight: 400;
         font-style: normal;
         font-size: .75rem;
+        margin: 0px 50px 0px 50px
     }
     
     .cta{
@@ -582,6 +583,7 @@ button:hover {
         font-weight: 400;
         font-style: normal;
         font-size: .75rem;
+        margin: 0px 50px 0px 50px
     }
 
 /*=======FOOTER=======*/
