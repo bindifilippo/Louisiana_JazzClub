@@ -56,7 +56,13 @@ body {
 
 }
 
-.locale h1 {
+.text-container {
+    display: flex;
+    flex-direction: column; 
+    padding-bottom: 0px;
+}
+
+.text-container h1 {
     font-family: "Rozha One", serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -64,18 +70,12 @@ body {
     margin: 0;
 }
 
-.locale h4 {
+.text-container h4 {
     font-family: "Jacques Francois", serif ;
     font-style: italic;
-    font-weight: 300;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 1.5rem !important;
     margin: 0; 
-}
-
-.text-container {
-    display: flex;
-    flex-direction: column; 
-    padding-bottom: 0px;
 }
 
 .navigazione{
@@ -421,7 +421,7 @@ button:hover {
     
     }
 
-    .locale h1 {
+    .text-container h1 {
         font-family: "Rozha One", serif;
         font-weight: 400;
         text-transform: uppercase;
@@ -429,10 +429,10 @@ button:hover {
         margin: 0;
     }
     
-    .locale h4 {
-        font-family: "Hind Madurai", serif;
+    .text-container h4 {
+        font-family: "Jacques Francois", serif ;
         font-weight: 300;
-        font-size: .5rem;
+        font-size: .8rem !important;
         margin: 0; 
     }
 
