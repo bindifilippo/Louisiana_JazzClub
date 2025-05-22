@@ -30,18 +30,18 @@
                 <h4>Genova, since 1964</h4>
             </div>
         </div>
-        <nav>
-            <button class="hamburger" id="hamburger-btn" aria-label="Apri menu">
-              <!-- Hamburger icon (3 lines) -->
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <ul class="navigazione" id="nav-menu">
-              <li><a href="./2_Programma.html">Programma</a></li>
-              <li><a href="./3_eventi-culturali.html">Eventi culturali</a></li>
-              <li><a href="./4_Tessaramento.html">Tessaramento</a></li>
-            </ul>
+            <nav>
+                <button class="hamburger" id="hamburger-btn" aria-label="Apri menu">
+                <!-- Hamburger icon (3 lines) -->
+                <span></span>
+                <span></span>
+                <span></span>
+                </button>
+                <ul class="navigazione" id="nav-menu">
+                <li><a href="./2_Programma.html">Programma</a></li>
+                <li><a href="./3_eventi-culturali.html">Eventi culturali</a></li>
+                <li><a href="./4_Tessaramento.html">Tessaramento</a></li>
+                </ul>
           </nav>
     </div>
 
@@ -188,7 +188,7 @@
     </script> 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function() {
             const hamburgerBtn = document.getElementById('hamburger-btn');
             const navMenu = document.getElementById('nav-menu');
 
@@ -197,13 +197,14 @@
                 navMenu.classList.toggle('show');
             });
 
-        document.querySelectorAll('#nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburgerBtn.classList.remove('active');
-                navMenu.classList.remove('show');
-                    });
+            // Chiudi il menu quando clicchi su una voce
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('show');
                 });
             });
+        });
     </script>
 </body>
 
