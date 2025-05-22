@@ -370,13 +370,25 @@ footer{
 
 /*=======PROGRAMMA=======*/
 .locandina img{
-    width:650px;
+    width:450px;
     margin-top:100px;
 }
 
 .locandina{
     display: flex;
     justify-content: center;
+}
+
+.swiper {
+    /*margin-left: auto;
+    margin-right: auto;*/
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+    margin:0px 300px!important;
 }
 
 /*=======EVENTI CULTURALI=======*/
@@ -709,16 +721,33 @@ button:hover {
         height: auto;
     }
 /*=======PROGRAMMA=======*/
-    .locandina img{
-        width:350px;
-        margin-top:50px;
-    }
+.locandina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;      /* niente padding */
+    margin: 0 auto;  /* centra se serve */
+}
+.locandina img {
+    width: 100%;
+    max-width: 340px; /* prova a ridurre ancora */
+    height: auto;
+    display: block;
+    margin-top: 105px!important; /* margine superiore per distanziare */
+}
 
-    .locandina{
-        display: flex;
-        justify-content: center;
-    }
-      
+.swiper {
+    margin-left: auto!important;
+    margin-right: auto!important;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
 /*=======EVENTI CULTURALI=======*/ 
 .flex-container{
     display: flex;
