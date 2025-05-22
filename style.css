@@ -125,7 +125,7 @@ body {
       border: none;
       cursor: pointer;
       z-index: 3001;
-      position: relative; /* <--- AGGIUNGI QUESTO! */
+      position: relative;
     }
     .hamburger span {
       display: block;
@@ -167,6 +167,7 @@ body {
     /* NAV: Menu mobile visibile */
     .navigazione.show {
       display: flex;
+      gap: 50px;
     }
   }
 
@@ -513,7 +514,7 @@ button:hover {
         color: white;
         font-family: "Hind Madurai", serif;
         font-weight: 300;
-        font-size: .75rem;
+        font-size: 1rem;
         text-decoration: none;
     }
     
@@ -521,7 +522,7 @@ button:hover {
         color: yellow;
         font-family: "Hind Madurai", serif;
         font-weight: 300;
-        font-size: .75rem;
+        font-size: 1rem;
         text-decoration-line: none;
         cursor:grab;
     }
