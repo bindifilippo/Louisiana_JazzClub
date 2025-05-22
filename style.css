@@ -37,7 +37,7 @@ body {
 
 .locale {
     display: flex; 
-    padding-left: 30px;
+   padding-left: 30px;
 }
 
 .locale img {
@@ -116,6 +116,11 @@ body {
   }
   
   @media (max-width: 768px) {
+    .locale {
+        display: flex; 
+        padding-left: 0px!important;
+    }
+
     .hamburger {
       display: flex;
       flex-direction: column;
@@ -126,7 +131,10 @@ body {
       cursor: pointer;
       z-index: 3001;
       position: relative;
+      padding-top:0px;
+      width: 10px;
     }
+
     .hamburger span {
       display: block;
       width: 30px;
@@ -475,13 +483,13 @@ button:hover {
 
 /*=======HEADER=======*/
     .logo{
-        width:80px;
-        height:80px;
+        width: 60px;
+        height:60px;
     }
 
     .logo:hover{
-        width:80px;
-        height:80px;
+        width:60px;
+        height:60px;
         transform: scale(1.2) rotate(7deg);
     
     }
@@ -773,7 +781,7 @@ button:hover {
 
 
     button {
-        margin-top: 15px;
+        margin-top: 0px;
         padding: 10px;
         background: orange;
         color: white;
