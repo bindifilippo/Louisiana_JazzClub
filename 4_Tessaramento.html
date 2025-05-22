@@ -101,5 +101,23 @@
         <a href="https://it.wikipedia.org/wiki/Louisiana_Jazz_Club" target="_blank"><img src="./immagini/Icona wikipedia.png" width="50px" height="50px"></a>
     </div>
 </footer>
+<script> // Hamburger menu
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
 
+    hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.classList.toggle('active');
+        navMenu.classList.toggle('show');
+    });
+
+    // Chiudi il menu quando clicchi su una voce
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            navMenu.classList.remove('show');
+        });
+    });
+});
+</script>
 </body>

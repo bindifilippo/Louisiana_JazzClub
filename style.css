@@ -121,6 +121,10 @@ body {
         padding-left: 0px!important;
     }
 
+    .locale img {
+        margin-right: 10px; 
+    }
+
     .hamburger {
       display: flex;
       flex-direction: column;
