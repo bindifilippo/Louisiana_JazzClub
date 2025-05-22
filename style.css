@@ -540,6 +540,19 @@ button:hover {
     }
 
 /* =======HOMEPAGE=======*/
+.video-wrapper {
+    margin-top: 100px;
+    /* occupa tutta la larghezza della pagina */
+    width: 100%;
+    
+    /* centra orizzontalmente (e verticalmente, se vuoi) */
+    display: flex;
+    justify-content: center;   /* centra in orizzontale */
+    align-items: center;       /* centra in verticale – togli se non ti serve */
+    
+    /* opzionale: altezza viewport per centrare verticalmente */
+    /* height: 100vh; */
+}
     .eventi h3{
         margin-top:-30px;
         text-align: center;
