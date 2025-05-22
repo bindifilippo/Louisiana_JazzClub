@@ -106,44 +106,68 @@ body {
 }
 
 .hamburger {
-    display: none; /* mostra solo su mobile con media query */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 3000;
+    display: none; /* mostreremo solo su mobile */
   }
   
-  .hamburger span {
-    display: block;
-    width: 30px;
-    height: 4px;
-    margin: 5px 0;
-    background: white;
-    border-radius: 2px;
-    transition: 0.3s;
+  .navigazione {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
   }
   
-  /* HAMBURGER VISIBLE SOLO SU MOBILE */
   @media (max-width: 768px) {
     .hamburger {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 3001;
+      position: relative; /* <--- AGGIUNGI QUESTO! */
     }
-  }
-  
-  /* ANIMAZIONE: hamburger -> X */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    .hamburger span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin: 5px 0;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+      
+    /* NAV: Menu mobile nascosto */
+    .navigazione {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: #991E1E;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      z-index: 2000;
+    }
+    /* NAV: Menu mobile visibile */
+    .navigazione.show {
+      display: flex;
+    }
   }
 
 /*=======HOMEPAGE=======*/
