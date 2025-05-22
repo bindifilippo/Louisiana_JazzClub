@@ -30,16 +30,19 @@
                 <h4>Genova, since 1964</h4>
             </div>
         </div>
-        <nav class="navbar">
-            <button class="hamburger" id="hamburger-btn" aria-label="Apri il menu">
-              &#9776;
+        <nav>
+            <button class="hamburger" id="hamburger-btn" aria-label="Apri menu">
+              <!-- Hamburger icon (3 lines) -->
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
-            <ul class="navigazione" id="navbar-menu">
+            <ul class="navigazione" id="nav-menu">
               <li><a href="./2_Programma.html">Programma</a></li>
               <li><a href="./3_eventi-culturali.html">Eventi culturali</a></li>
               <li><a href="./4_Tessaramento.html">Tessaramento</a></li>
             </ul>
-        </nav>
+          </nav>
     </div>
 
     <div class="video-wrapper">
@@ -186,12 +189,21 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-          const hamburgerBtn = document.getElementById('hamburger-btn');
-          const menu = document.getElementById('navbar-menu');
-          hamburgerBtn.addEventListener('click', function() {
-            menu.classList.toggle('show');
-          });
-        });
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburgerBtn.addEventListener('click', function() {
+                hamburgerBtn.classList.toggle('active');
+                navMenu.classList.toggle('show');
+            });
+
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('show');
+                    });
+                });
+            });
     </script>
 </body>
 
