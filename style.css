@@ -340,6 +340,25 @@ body {
     font-size: 1rem;
 }
 
+.contatto, .mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#991E1E
+}
+.contatto{
+    margin-top: 100px;
+}
+.mail{
+    margin-top: 20px;
+}
+
+.mail:hover{
+    margin-top: 20px;
+    color:orange;
+    cursor: pointer;
+}
+
 /*=======FOOTER=======*/
 footer{
     margin-top: 100px;
@@ -754,6 +773,26 @@ button:hover {
         margin: 0px 50px 0px 50px
     }
 
+    .contatto, .mail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#991E1E
+    }
+    .contatto{
+        font-size:1rem ;
+        margin-top: -30px;
+    }
+    .mail{
+        font-size:.9rem ;
+        margin-top: 20px;
+        color:orange;
+    }
+    .mail:hover{
+        margin-top: 20px;
+        color:orange;
+        cursor: pointer;
+    }
 /*=======FOOTER=======*/
     footer{
         margin-top: 50px;
@@ -818,6 +857,7 @@ button:hover {
 }
 
 /*=======EVENTI CULTURALI=======*/ 
+
 .flex-container{
     display: flex;
     flex-direction: column; /* Imposta sempre colonna */
