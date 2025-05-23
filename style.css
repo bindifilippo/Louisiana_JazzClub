@@ -396,22 +396,35 @@ footer{
 /* Flexbox per desktop */
 @media (min-width: 769px) {
     .flex-container {
-        margin-top: 125px;
-        flex-direction: row; /* Mantiene la riga solo per desktop */
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+    .card {
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+        margin: 20px;
+    }
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
 }
-
-.card{
-    height:500px;
-    width: 500px;
-    margin:0px 30px 20px 0;
-}
-
 /*=======TESSERAMENTO=======*/
-.flex-container{
+.flex-container2{
     display: flex;
+    margin-top: 100px;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 #tesseramento{
