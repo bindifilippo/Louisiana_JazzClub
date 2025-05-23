@@ -410,12 +410,55 @@ footer{
         height: 500px;
         overflow: hidden;
         margin: 20px;
+        position: relative; /* Serve per l'overlay */
+        cursor: pointer;
     }
     .card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Effetto di ingrandimento immagine */
+    .card:hover img {
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 2;
+    }
+    
+    /* Mostra overlay all'hover della card */
+    .card:hover .overlay {
+        opacity: 1;
+    }
+    
+    /* Scritta centrale bianca di default */
+    .scopri {
+        color: white;
+        font-family: "Rozha One", serif;
+        font-size: 2rem;
+        padding: 10px 20px;
+        border-radius: 6px;
+        transition: color 0.2s, background 0.2s;
+        cursor: pointer;
+    }
+    
+    /* Cambia colore solo quando il mouse è sopra la scritta */
+    .scopri:hover {
+        color: yellow;
+        background: rgba(0,0,0,0.3); /* optional, per rendere l’effetto più visibile */
     }
 }
 /*=======TESSERAMENTO=======*/
