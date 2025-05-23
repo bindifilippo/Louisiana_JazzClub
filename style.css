@@ -458,7 +458,6 @@ footer{
     /* Cambia colore solo quando il mouse è sopra la scritta */
     .scopri:hover {
         color: yellow;
-        background: rgba(0,0,0,0.3); /* optional, per rendere l’effetto più visibile */
     }
 }
 /*=======TESSERAMENTO=======*/
@@ -826,6 +825,11 @@ button:hover {
      width: 400px;
     height: auto;
 }
+
+.scopri {
+    display: none;
+}
+
 
 /*=======TESSERAMENTO=======*/
     .flex-container{
