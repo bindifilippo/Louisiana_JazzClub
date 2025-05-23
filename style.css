@@ -803,7 +803,7 @@ button:hover {
     max-width: 340px; /* prova a ridurre ancora */
     height: auto;
     display: block;
-    margin-top: 130px!important; /* margine superiore per distanziare */
+    margin-top: 50px!important; /* margine superiore per distanziare */
 }
 
 .swiper {
