@@ -463,18 +463,18 @@ footer{
 /*=======TESSERAMENTO=======*/
 .flex-container2{
     display: flex;
-    margin-top: 100px;
-    align-items: center;
-    flex-direction: column;
-
+    margin-left: 200px;
 }
 
 #tesseramento{
 height:350px;
+margin-top: 150px;
 }
 
 /* Form */
 .container {
+    margin-top: 150px;
+    margin-bottom: -40px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -497,6 +497,7 @@ form {
 label {
     font-family: "Hind Madurai", serif;
     font-weight: normal;
+    margin-top: 15px;
 }
 
 input {
@@ -545,6 +546,14 @@ button:hover {
     padding:0;                    /* (facoltativo) rimuove il padding che il fieldset ha di default */
   }
 
+  .bold{
+    font-weight: bold;
+  }
+
+  .small{
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
 
 /*=======MOBILE=======*/
 @media (max-width: 768px) {
@@ -794,7 +803,9 @@ button:hover {
     max-width: 340px; /* prova a ridurre ancora */
     height: auto;
     display: block;
-    margin-top: 105px!important; /* margine superiore per distanziare */
+    margin-top: 130px!important; /* margine superiore per distanziare */
+    margin-bottom: 100px; /* azzera margine inferiore */
+
 }
 
 .swiper {
@@ -836,17 +847,18 @@ button:hover {
 
 
 /*=======TESSERAMENTO=======*/
-    .flex-container{
-            display: flex;
-            flex-direction: column; /* Dispone gli elementi in colonna */
-            justify-content: center; /* Centra verticalmente */
-            align-items: center; /* Centra orizzontalmente */
+    .flex-container2{
+        display: flex;
+        flex-direction: column!important; /* Dispone gli elementi in colonna */
+        justify-content: center!important; /* Centra verticalmente */
+        align-items: center!important; /* Centra orizzontalmente */
+        margin-left: 0px!important; /* Azzera il margine sinistro */
 }
 
     #tesseramento{
-        width: 300px;
+        width: 250px;
         height: auto;
-        margin: 0 auto;
+        margin-top: 50px;
     }
 
     .container {
@@ -855,6 +867,7 @@ button:hover {
         border-radius: 8px;
         /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
         width: 300px;
+        margin: 0 auto!important; /* Centra orizzontalmente */
     }
 
     
