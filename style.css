@@ -804,8 +804,6 @@ button:hover {
     height: auto;
     display: block;
     margin-top: 130px!important; /* margine superiore per distanziare */
-    margin-bottom: 100px; /* azzera margine inferiore */
-
 }
 
 .swiper {
