@@ -495,7 +495,6 @@ form {
 }
 
 label {
-    margin-top: 10px;
     font-family: "Hind Madurai", serif;
     font-weight: normal;
 }
@@ -530,8 +529,13 @@ button {
 button:hover {
     background: #991E1E;
 }
+.dati{
+    font-family: Hind Madurai, serif;
+    margin-top: 25px;
+    }
 
 #payment-choice{
+    font-family: Hind Madurai, serif;
     display:flex;
     gap:20px;
     margin:20px 0;
