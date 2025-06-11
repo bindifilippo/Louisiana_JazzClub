@@ -1,15 +1,14 @@
 # Louisiana Jazz Club
 
-Progetto personale realizzato come esercitazione.
-Non si tratta del sito ufficiale del jazz club di Genova.
+Progetto personale realizzato come esercitazione. Non si tratta del sito ufficiale.
 
-Ogni pagina è responsive ed è stata creata con **HTML5**, **CSS3** e delle integrazioni di **JavaScript** 
+Ogni pagina è responsive e combina **HTML5**, **CSS3** e funzionalità in **JavaScript**.
 
-## Elementi aggiunti
-- Layout versione desktop  
-- Slider interattivo per eventi  
+## Elementi nuovi aggiunti
+- Layout desktop responsive 
+- Slider interattivo 
 - Form per tesseramenti  
 - Hyperlink pagine social  
-- Evento video  
+- Video Youtube
 - Micro-animazioni  
 
