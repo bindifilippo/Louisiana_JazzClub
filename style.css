@@ -5,9 +5,26 @@
     /*border: 1px red solid;*/
 }
 
+html, body {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    overscroll-behavior-y: none;
+}
 
-/*HEADER*/
+body {
+    padding-top: 80px;      /* stessa altezza header fisso */
+}
+
+/*=======HEADER=======*/
 .header{
+    position: fixed;     /* lo sgancia dal flusso del documento */
+    top: 0;              /* ancorato al bordo superiore della finestra */
+    left: 0;
+    width: 100%;         /* occupa tutta la larghezza */
+    z-index: 1000;       /* sopra al resto (scegli un valore alto) */
+
     display: flex;
     flex-direction: row;
     background-color: bisque;
@@ -20,7 +37,7 @@
 
 .locale {
     display: flex; 
-    padding-left: 30px;
+   padding-left: 30px;
 }
 
 .locale img {
@@ -39,7 +56,13 @@
 
 }
 
-.locale h1 {
+.text-container {
+    display: flex;
+    flex-direction: column; 
+    padding-bottom: 0px;
+}
+
+.text-container h1 {
     font-family: "Rozha One", serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -47,18 +70,12 @@
     margin: 0;
 }
 
-.locale h4 {
+.text-container h4 {
     font-family: "Jacques Francois", serif ;
     font-style: italic;
-    font-weight: 300;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 1.5rem !important;
     margin: 0; 
-}
-
-.text-container {
-    display: flex;
-    flex-direction: column; 
-    padding-bottom: 0px;
 }
 
 .navigazione{
@@ -88,10 +105,87 @@
     cursor:grab;
 }
 
+.hamburger {
+    display: none; /* mostreremo solo su mobile */
+  }
+  
+  .navigazione {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  @media (max-width: 768px) {
+    .locale {
+        display: flex; 
+        padding-left: 0px!important;
+    }
 
-/*HOMEPAGE*/
+    .locale img {
+        margin-right: 10px; 
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 3001;
+      position: relative;
+      padding-top:0px;
+      width: 10px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin: 5px 0;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(13.5px) rotate(45deg);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-13.5px) rotate(-45deg);
+      }
+      
+    /* NAV: Menu mobile nascosto */
+    .navigazione {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: #991E1E;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      z-index: 2000;
+    }
+    /* NAV: Menu mobile visibile */
+    .navigazione.show {
+      display: flex;
+      gap: 50px;
+    }
+  }
+
+/*=======HOMEPAGE=======*/
 .video-wrapper {
-    margin-top: 50px;
+    margin-top: 150px;
     /* occupa tutta la larghezza della pagina */
     width: 100%;
     
@@ -104,7 +198,6 @@
     /* height: 100vh; */
 }
 
-/* se vuoi che l’iframe sia fluido sotto i 560 px */
 .video-wrapper iframe {
     max-width: 100%;
     height: auto;
@@ -112,16 +205,61 @@
     border: 0;
 }
 
+.eventi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    color:#991E1E;
+}
+.eventi h3{
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:orange;
+}
+
+/* Effetto “nascosto” di base */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .8s ease, transform .8s ease;
+    transition-delay: .05s; /* ritardo leggero anti "flash" */
+}
+
+/* Quando diventa visibile */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gif{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* assicura che parta in alto */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: auto;  /* non impone altezza extra */
+    min-height: 0; /* se ereditato da qualche parte */
+}
+
+.gif dotlottie-player {
+    margin-bottom: 0 !important;
+    display: block;
+}
+
 .AB{
     display: flex;
     justify-content:center;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .BA{
     display: flex;
     justify-content:center;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 
@@ -202,7 +340,27 @@
     font-size: 1rem;
 }
 
-/*FOOTER*/
+.contatto, .mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#991E1E
+}
+.contatto{
+    margin-top: 100px;
+}
+.mail{
+    margin-top: 20px;
+    color:orange;
+}
+
+.mail:hover{
+    margin-top: 20px;
+    color:orange;
+    cursor: pointer;
+}
+
+/*=======FOOTER=======*/
 footer{
     margin-top: 100px;
     background-color: #991E1E;
@@ -211,6 +369,7 @@ footer{
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    bottom: 0;
 }
 
 .professione{
@@ -229,9 +388,9 @@ footer{
     margin-left:30px;
 }
 
-/* PROGRAMMA */
+/*=======PROGRAMMA=======*/
 .locandina img{
-    width:650px;
+    width:450px;
     margin-top:100px;
 }
 
@@ -240,33 +399,102 @@ footer{
     justify-content: center;
 }
 
-/*EVENTI CULTURALI*/
+.swiper {
+    /*margin-left: auto;
+    margin-right: auto;*/
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+    margin:0px 300px!important;
+}
+
+
+/*=======EVENTI CULTURALI=======*/
+/* Flexbox per desktop */
 @media (min-width: 769px) {
     .flex-container {
-        margin-top: 125px;
-        flex-direction: row; /* Mantiene la riga solo per desktop */
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+    .card {
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+        margin: 20px;
+        position: relative; /* Serve per l'overlay */
+        cursor: pointer;
+    }
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Effetto di ingrandimento immagine */
+    .card:hover img {
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 2;
+    }
+    
+    /* Mostra overlay all'hover della card */
+    .card:hover .overlay {
+        opacity: 1;
+    }
+    
+    /* Scritta centrale bianca di default */
+    .scopri {
+        color: white;
+        font-family: "Rozha One", serif;
+        font-size: 2rem;
+        padding: 10px 20px;
+        border-radius: 6px;
+        transition: color 0.2s, background 0.2s;
+        cursor: pointer;
+    }
+    
+    /* Cambia colore solo quando il mouse è sopra la scritta */
+    .scopri:hover {
+        color: yellow;
     }
 }
-
-.card{
-    height:500px;
-    width: 500px;
-    margin:0px 30px 20px 0;
-}
-
-/*TESSERAMENTO*/
-.flex-container{
+/*=======TESSERAMENTO=======*/
+.flex-container2{
     display: flex;
+    margin-left: 200px;
 }
 
 #tesseramento{
 height:350px;
+margin-top: 150px;
 }
 
 /* Form */
 .container {
+    margin-top: 150px;
+    margin-bottom: -40px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -287,9 +515,9 @@ form {
 }
 
 label {
-    margin-top: 10px;
     font-family: "Hind Madurai", serif;
     font-weight: normal;
+    margin-top: 15px;
 }
 
 input {
@@ -322,8 +550,13 @@ button {
 button:hover {
     background: #991E1E;
 }
+.dati{
+    font-family: Hind Madurai, serif;
+    margin-top: 25px;
+    }
 
 #payment-choice{
+    font-family: Hind Madurai, serif;
     display:flex;
     gap:20px;
     margin:20px 0;
@@ -333,8 +566,16 @@ button:hover {
     padding:0;                    /* (facoltativo) rimuove il padding che il fieldset ha di default */
   }
 
+  .bold{
+    font-weight: bold;
+  }
 
-/*Mobile*/
+  .small{
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
+
+/*=======MOBILE=======*/
 @media (max-width: 768px) {
     *{
         box-sizing: border-box;
@@ -345,37 +586,37 @@ button:hover {
         max-width: 100%;
     }
 
-/*header*/
+/*=======HEADER=======*/
     .logo{
-        width:80px;
-        height:80px;
+        width: 60px;
+        height:60px;
     }
 
     .logo:hover{
-        width:80px;
-        height:80px;
+        width:60px;
+        height:60px;
         transform: scale(1.2) rotate(7deg);
     
     }
 
-    .locale h1 {
+    .text-container h1 {
         font-family: "Rozha One", serif;
         font-weight: 400;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin: 0;
     }
     
-    .locale h4 {
-        font-family: "Hind Madurai", serif;
+    .text-container h4 {
+        font-family: "Jacques Francois", serif ;
         font-weight: 300;
-        font-size: .5rem;
+        font-size: .8rem !important;
         margin: 0; 
     }
-
+    /*
     .navigazione{
         width: 200px;
-    }
+    }*/
 
     .navigazione li{
         display: inline;
@@ -386,7 +627,7 @@ button:hover {
         color: white;
         font-family: "Hind Madurai", serif;
         font-weight: 300;
-        font-size: .75rem;
+        font-size: 1rem;
         text-decoration: none;
     }
     
@@ -394,11 +635,56 @@ button:hover {
         color: yellow;
         font-family: "Hind Madurai", serif;
         font-weight: 300;
-        font-size: .75rem;
+        font-size: 1rem;
         text-decoration-line: none;
         cursor:grab;
     }
-/* Homepage-mobile*/
+
+/* =======HOMEPAGE=======*/
+.video-wrapper {
+    margin-top: 100px;
+    /* occupa tutta la larghezza della pagina */
+    width: 100%;
+    
+    /* centra orizzontalmente (e verticalmente, se vuoi) */
+    display: flex;
+    justify-content: center;   /* centra in orizzontale */
+    align-items: center;       /* centra in verticale – togli se non ti serve */
+    
+    /* opzionale: altezza viewport per centrare verticalmente */
+    /* height: 100vh; */
+}
+    .eventi h3{
+        margin-top:-30px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .gif {
+      /* Centra comunque la gif */
+      justify-content: center;
+      /* Puoi ridurre la spaziatura sopra/sotto se serve */
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  
+    .gif dotlottie-player {
+      width: 180px !important;
+      height: 180px !important;
+      /* Riduci o annulla il margin-top negativo se sballa il layout */
+      margin-top: -30px !important;
+      margin-bottom: 0 !important;
+    }
+  
+    /* Se usi un wrapper per margin-bottom, puoi anche qui gestire il margin */
+    .lottie-wrapper {
+      margin-bottom: -60px !important;
+    }
+
+    .BA.reveal, .AB.reveal {
+        margin-bottom: 80px;
+      }
+
     .AB {
         display: flex;
         flex-direction: column-reverse; /* Inverte ordine: prima immagine, poi testo */
@@ -442,6 +728,7 @@ button:hover {
         font-weight: 400;
         font-style: normal;
         font-size: .75rem;
+        margin: 0px 50px 0px 50px
     }
     
     .cta{
@@ -484,9 +771,31 @@ button:hover {
         font-weight: 400;
         font-style: normal;
         font-size: .75rem;
+        margin: 0px 50px 0px 50px
     }
 
-/*footer*/
+    .contatto, .mail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#991E1E
+    }
+    .contatto{
+        font-size:1rem ;
+        margin-top: -30px;
+        text-align: center;
+    }
+    .mail{
+        font-size:.9rem ;
+        margin-top: 20px;
+        color:orange;
+    }
+    .mail:hover{
+        margin-top: 20px;
+        color:orange;
+        cursor: pointer;
+    }
+/*=======FOOTER=======*/
     footer{
         margin-top: 50px;
         background-color: #991E1E;
@@ -496,41 +805,61 @@ button:hover {
         justify-content: center;
     }
     .professione{
-        width: 270px;
+        margin-bottom:-10px;
+        margin-left:0px!important;
     }
 
     .professione h1{
         font-size: 1rem;
+        text-align: center;
     }
 
     .professione h3{
         font-style: italic;
         font-size: .75rem;
         font-weight: 400;
-
+        text-align: center;
     }
 
     .social{
         width:200px;
-        margin-right: 40px;
+        margin-right: 0px!important;
     }
 
     .social img{
         width:20px;
         height: auto;
     }
-/*Programma*/
-    .locandina img{
-        width:350px;
-        margin-top:50px;
-    }
+/*=======PROGRAMMA=======*/
+.locandina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;      /* niente padding */
+    margin: 0 auto;  /* centra se serve */
+}
+.locandina img {
+    width: 100%;
+    max-width: 340px; /* prova a ridurre ancora */
+    height: auto;
+    display: block;
+    margin-top: 50px!important; /* margine superiore per distanziare */
+}
 
-    .locandina{
-        display: flex;
-        justify-content: center;
-    }
-      
-/*Eventi culturali*/ 
+.swiper {
+    margin-left: auto!important;
+    margin-right: auto!important;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+/*=======EVENTI CULTURALI=======*/ 
+
 .flex-container{
     display: flex;
     flex-direction: column; /* Imposta sempre colonna */
@@ -538,7 +867,7 @@ button:hover {
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .card {
@@ -552,18 +881,24 @@ button:hover {
     height: auto;
 }
 
-/*Tesseramento*/
-    .flex-container{
-            display: flex;
-            flex-direction: column; /* Dispone gli elementi in colonna */
-            justify-content: center; /* Centra verticalmente */
-            align-items: center; /* Centra orizzontalmente */
+.scopri {
+    display: none;
+}
+
+
+/*=======TESSERAMENTO=======*/
+    .flex-container2{
+        display: flex;
+        flex-direction: column!important; /* Dispone gli elementi in colonna */
+        justify-content: center!important; /* Centra verticalmente */
+        align-items: center!important; /* Centra orizzontalmente */
+        margin-left: 0px!important; /* Azzera il margine sinistro */
 }
 
     #tesseramento{
-        width: 300px;
+        width: 250px;
         height: auto;
-        margin: 0 auto;
+        margin-top: 50px;
     }
 
     .container {
@@ -572,6 +907,7 @@ button:hover {
         border-radius: 8px;
         /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
         width: 300px;
+        margin: 0 auto!important; /* Centra orizzontalmente */
     }
 
     
@@ -609,7 +945,7 @@ button:hover {
 
 
     button {
-        margin-top: 15px;
+        margin-top: 0px;
         padding: 10px;
         background: orange;
         color: white;

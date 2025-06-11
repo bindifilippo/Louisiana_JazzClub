@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title> Programma </title>
+    <title> Eventi </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
     </head>
     
 <body>
@@ -40,36 +37,88 @@
         <li><a href="./3_eventi-culturali.html">Eventi</a></li>
         <li><a href="./4_Tessaramento.html">Tessaramento</a></li>
         </ul>
-    </nav>
+  </nav>
 </div>
 
-<!-- Swiper -->
-<div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="locandina">
-            <img src="./immagini/programma_1.png">
-        </div>
-      </div>
 
-      <div class="swiper-slide">
-        <div class="locandina">
-            <img src="./immagini/programma_2.png">
+<div class="flex-container"> 
+    <div class="card">
+        <img src="./immagini/Eventi.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
         </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="locandina">
-            <img src="./immagini/programma_3.png">
-        </div>
-      </div>
     </div>
-    <!-- Navigation buttons -->
-    <div class="swiper-button-prev" style="color: orange;"></div>
-    <div class="swiper-button-next" style="color: orange;"></div>
-    <!-- Pagination dots -->
-  </div>
-  
+
+    <div class="card"> 
+        <img src="./immagini/Eventi2.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi3.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>   
+    
+    <div class="card">  
+        <img src="./immagini/Eventi4.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div> 
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi 5.png">  
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi 6.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi 7.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi 8.jpg">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi 9.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi 10.jpg">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div>
+    
+    <div class="card"> 
+        <img src="./immagini/Eventi 11.png">
+        <div class="overlay">
+            <span class="scopri">Scopri di più</span>
+        </div>
+    </div> 
+</div>
 
 <footer>
     <div class="professione">
@@ -102,22 +151,5 @@
         });
     });
 });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    spaceBetween: 16, // Spazio tra le slide
-    slidesPerView: 1, // 1 slide visibile alla volta, cambia se vuoi vedere più slide
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  });
 </script>
 </body>
